@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Cell | Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0b0b14;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #24243a;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .logout-btn {
+            padding: 10px 22px;
+            border: 1px solid #7c3aed;
+            border-radius: 8px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .logout-btn:hover {
+            background: #7c3aed;
+        }
+
+        /* Dashboard */
+        .dashboard {
+            padding: 60px 7%;
+        }
+
+        .welcome h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .welcome p {
+            color: #aaa;
+            font-size: 17px;
+        }
+
+        .purple {
+            color: #a78bfa;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .card {
+            background: #131322;
+            border: 1px solid #28283d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #7c3aed;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .number {
+            font-size: 32px;
+            color: #a78bfa;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Quick Actions */
+        .actions {
+            margin-top: 50px;
+        }
+
+        .actions h2 {
+            margin-bottom: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            text-decoration: none;
+            color: white;
+            background: #7c3aed;
+            padding: 13px 22px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .action-btn:hover {
+            background: #6d28d9;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .dashboard {
+                padding: 40px 5%;
+            }
+
+            .welcome h1 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+
+        <img
+            class="logo"
+            src="https://ik.imagekit.io/es6xialea/logowithoutname_FRoJAY4ve?updatedAt=1755297005039"
+            alt="E-Cell SMVIT Logo"
+        >
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </nav>
+
+
+    <!-- Dashboard Content -->
+    <main class="dashboard">
+
+        <section class="welcome">
+
+            <h1>
+                Welcome to <span class="purple">E-Cell</span> 🚀
+            </h1>
+
+            <p>
+                Your entrepreneurial journey starts here.
+            </p>
+
+        </section>
+
+
+        <!-- Dashboard Cards -->
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="number">01</div>
+
+                <h3>Explore</h3>
+
+                <p>
+                    Discover entrepreneurship opportunities,
+                    events and activities organized by E-Cell.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="number">02</div>
+
+                <h3>Events</h3>
+
+                <p>
+                    Stay updated with upcoming workshops,
+                    competitions and E-Cell events.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="number">03</div>
+
+                <h3>Connect</h3>
+
+                <p>
+                    Connect with fellow innovators,
+                    entrepreneurs and the E-Cell community.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Actions -->
+        <section class="actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-buttons">
+
+                <a href="#" class="action-btn">
+                    Explore Events
+                </a>
+
+                <a href="#" class="action-btn">
+                    My Profile
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function logout() {
+
+            // Authentication logout will be connected later
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+<script type="module" src="script.js"></script>
+</body>
+</html>
+
