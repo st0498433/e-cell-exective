@@ -1,4 +1,4 @@
-import { Client, Account, ID } from "appwrite";
+import { Client, Account, ID } from "https://cdn.jsdelivr.net/npm/appwrite@14.0.1/+esm";
 
 const PROJECT_ID = "6ac105a600008a2bf4f5";
 const ENDPOINT = "https://fra.cloud.appwrite.io/v1";
