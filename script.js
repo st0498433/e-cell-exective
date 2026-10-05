@@ -19,15 +19,18 @@ if (signupForm) {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
+        console.log("SIGNUP EMAIL:",email);
+        console.log("SIGNUP NAME:",name);
+
         
 
         try {
-            await account.create({
-                userId: ID.unique(),
-                email: email,
-                password: password,
-                name: name
-            });
+            await account.create(
+                 ID.unique(),
+                 email,
+                 password,
+                 name
+    );
 
             window.location.href = "dashboard.html";
 
@@ -51,7 +54,7 @@ console.log("PASSWORD LENGTH:", password.length);
 
         try {
             await account.createEmailPasswordSession(email,password);
-            
+
 
             window.location.href = "dashboard.html";
 
