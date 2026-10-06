@@ -1,7 +1,9 @@
 import { Client, Account, ID } from "https://cdn.jsdelivr.net/npm/appwrite@14.0.1/+esm";
 
-const PROJECT_ID = "6ac105a600008a2bf4f5";
-const ENDPOINT = "https://fra.cloud.appwrite.io/v1";
+const PROJECT_ID = import.meta.env.VITE_PROJECT_ID;
+
+
+const ENDPOINT = import.meta.env.VITE_ENDPOINT;
 
 const client = new Client()
     .setEndpoint(ENDPOINT)
@@ -19,8 +21,7 @@ if (signupForm) {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        console.log("SIGNUP EMAIL:",email);
-        console.log("SIGNUP NAME:",name);
+        
 
         
 
@@ -49,8 +50,7 @@ if (loginForm) {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
 
-        console.log("EMAIL:", email);
-console.log("PASSWORD LENGTH:", password.length);
+        
 
         try {
             await account.createEmailPasswordSession(email,password);
